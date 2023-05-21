@@ -58,18 +58,21 @@ class Dinosaur:
     def update(self, user_input):
         if user_input[pygame.K_UP] and not self.dino_jump:
             self.dino_jump = True
-            self.dino_run = False
-            self.dino_duck = False
+            self.dino_run = False    
         elif not self.dino_jump:
             self.dino_run = True
-
+    
         if self.dino_run:
             self.run()
         elif self.dino_jump:
             self.jump()
 
-        if user_input[pygame.K_DOWN] and not self.dino_duck:
+        if user_input[pygame.K_DOWN] and not self.dino_duck and not self.dino_jump:
             self.duck()
+        
+        
+
+    
 
         
     def draw(self, screen):
