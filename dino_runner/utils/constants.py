@@ -10,8 +10,11 @@ FONT_STYLE = "freesansbold.ttf"
 
 IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 
+
 SMALL_CACTUS_Y_POS = 325
+
 LARGE_CACTUS_Y_POS = 300
+
 BIRD_Y_POS = 250
 
 DEFAULT_TYPE = "default"

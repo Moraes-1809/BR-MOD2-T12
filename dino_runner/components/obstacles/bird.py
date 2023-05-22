@@ -1,5 +1,4 @@
 import random
-
 from dino_runner.utils.constants import BIRD, BIRD_Y_POS
 from dino_runner.components.obstacles.obstacle import Obstacle
 
