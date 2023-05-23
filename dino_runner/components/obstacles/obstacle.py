@@ -2,12 +2,10 @@ from dino_runner.utils.constants import SCREEN_WIDTH
 
 class Obstacle:
 
-    def __init__(self, images, type):
-
-        self.image = images[type]
-
+    def __init__(self, images, type): 
+    
+        self.image = images[type]      
         self.rect = self.image.get_rect()
-
         self.rect.x = SCREEN_WIDTH
 
     def draw(self, screen):
@@ -21,3 +19,4 @@ class Obstacle:
         if self.rect.x < -self.rect.width:
 
             obstacles.pop()
+
