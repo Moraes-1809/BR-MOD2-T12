@@ -4,6 +4,8 @@ from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, T
 from dino_runner.components.dinosaur import Dinosaur
 from dino_runner.components.obstacles.obstacle_manager import ObstacleManager
 from dino_runner.components.power_ups.power_up_manager import PowerUpManager
+from dino_runner.components.power_ups.hammer import Hammer
+from dino_runner.components.power_ups.shield import Shield
 
 class Game:
     def __init__(self):
@@ -21,7 +23,7 @@ class Game:
         self.obstacle_manager = ObstacleManager()
         self.death_count = 0
         self.score = 0
-
+        
 
 
     def run(self):
@@ -53,7 +55,7 @@ class Game:
             if event.type == pygame.QUIT:
                 self.playing = False
                 self.executing = False
-
+        
     def update(self):
         user_input = pygame.key.get_pressed()
         self.player.update(user_input)
